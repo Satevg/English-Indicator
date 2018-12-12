@@ -1,0 +1,7 @@
+[DEFAULT]
+APPINDICATOR_ID = ENHLISSSS
+MINUTES_INTERVAL = 20
+
+[YANDEX]
+API_KEY = trnsl.1.1.10d8ahahhaa180can6b.e5c9you68f969see69d3athis2f38c2fdfc6man9?3f
+TRANSLATE_BASE_URL = https://translate.yandex.net/api/v1.5/tr.json/translate
