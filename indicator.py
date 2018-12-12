@@ -46,7 +46,6 @@ class EnglishIndicator:
         Gtk.main()
 
     def get_word(self):
-        print('GET WORD')
         word = self.random_service.get_random_word()
         response = requests.get(f'{YANDEX_TRANSLATE_BASE_URL}?text={word}&lang=en-ru&key={YANDEX_TRANSLATE_KEY}').json()
         try:
