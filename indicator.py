@@ -1,5 +1,4 @@
 import gi
-import os
 import requests
 import configparser
 
@@ -11,11 +10,12 @@ from gi.repository import Gtk
 from gi.repository import AppIndicator3 as appindicator
 from gi.repository import GLib
 from gi.repository import Notify
+from pathlib import Path
 from random_word import RandomWords
 
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read(Path(__file__).resolve().parent.joinpath('config.ini'))
 APPINDICATOR_ID = config['DEFAULT']['APPINDICATOR_ID']
 MINUTES_INTERVAL = int(config['DEFAULT']['MINUTES_INTERVAL'])
 YANDEX_TRANSLATE_KEY = config['YANDEX']['API_KEY']
@@ -28,7 +28,7 @@ class EnglishIndicator:
 
         self.ind = appindicator.Indicator.new(
             APPINDICATOR_ID,
-            os.path.abspath('./img/book.png'),
+            str(Path(__file__).resolve().parent.joinpath('./img/book.png')),
             appindicator.IndicatorCategory.SYSTEM_SERVICES)
         self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
 

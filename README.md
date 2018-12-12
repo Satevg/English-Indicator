@@ -14,3 +14,8 @@ Translates random words from english to russian and shows in balloon popup
 + Copy `config.ini.template` into `config.ini` and replace values:
   - API_KEY - obtain from [documentation](https://tech.yandex.ru/translate/doc/dg/concepts/api-keys-docpage/)
   - MINUTES_INTERVAL - default is 20: once in 20 minutes popup will be shown.
+
+#### Optional: auto startup:
+
+add something like `/home/yauheni/Dev/english_indicator/venv/bin/python /home/yauheni/Dev/english_indicator/indicator.py &`
+to your `~/.profile` file.
